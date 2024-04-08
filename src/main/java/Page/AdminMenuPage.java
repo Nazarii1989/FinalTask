@@ -10,24 +10,24 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class Admin_Page {
+public class AdminMenuPage {
 
     private WebDriver driver;
 
     @FindBy(xpath = "//a[@href=\"/web/index.php/admin/viewAdminModule\"]")
-    private WebElement Admin;
+    private WebElement adminMenu;
 
-    public Admin_Page(WebDriver driver){
+    public AdminMenuPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void Admin() throws InterruptedException {
+    public void clickAdminMenu() throws InterruptedException {
 
         Wait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).
                 pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
 
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Admin)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(adminMenu)).click();
 
     }
 }

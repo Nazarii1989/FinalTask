@@ -10,50 +10,50 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class New_Job_Tittle_Page {
+public class NewJobTittlePage {
 
     private WebDriver driver;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]")
-    private WebElement Job;
+    private WebElement createJob;
 
     @FindBy(xpath = "//a[text()=\"Job Titles\"]")
-    private WebElement JobTitles;
+    private WebElement jobTitles;
 
     @FindBy(xpath = "//button[@class=\"oxd-button oxd-button--medium oxd-button--secondary\"]")
-    private WebElement Add;
+    private WebElement clickAddButton;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/input")
-    private WebElement AddJobTittle;
+    private WebElement addJobTittle;
 
     @FindBy(xpath = "//textarea[@placeholder=\"Type description here\"]")
-    private WebElement AddJobDescription;
+    private WebElement addJobDescription;
 
     @FindBy(xpath = "//div[@class=\"oxd-file-button\"]")
-    private WebElement File;
+    private WebElement file;
 
     @FindBy(xpath = "//textarea[@placeholder=\"Add note\"]")
-    private WebElement Note;
+    private WebElement clickNote;
 
     @FindBy(xpath = "//button[@type=\"submit\"]")
     private WebElement Save;
 
-    public New_Job_Tittle_Page(WebDriver driver) {
+    public NewJobTittlePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void New_Job() throws InterruptedException {
+    public void createNewJob() throws InterruptedException {
 
         Wait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).
                 pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
 
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Job)).click();
-        fluentWait.until(ExpectedConditions.elementToBeClickable(JobTitles)).click();
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Add)).click();
-        fluentWait.until(ExpectedConditions.elementToBeClickable(AddJobTittle)).sendKeys("WorkerQANazar");
-        fluentWait.until(ExpectedConditions.elementToBeClickable(AddJobDescription)).sendKeys("Good Worker QA");
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Note)).sendKeys("Staff");
+        fluentWait.until(ExpectedConditions.elementToBeClickable(createJob)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(jobTitles)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(clickAddButton)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(addJobTittle)).sendKeys("WorkerQANazar");
+        fluentWait.until(ExpectedConditions.elementToBeClickable(addJobDescription)).sendKeys("Good Worker QA");
+        fluentWait.until(ExpectedConditions.elementToBeClickable(clickNote)).sendKeys("Staff");
         fluentWait.until(ExpectedConditions.elementToBeClickable(Save)).click();
     }
 }

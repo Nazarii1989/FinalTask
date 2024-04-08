@@ -10,37 +10,37 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class Verify_Page_Job_Tittle {
+public class VerifyJobTittlePage {
 
     private WebDriver driver;
 
     @FindBy(xpath = "//div[text()=\"WorkerQANazar\"]")
-    private WebElement Check;
+    private WebElement clickCheck;
 
     @FindBy(xpath = "//div[30]/div/div/div[1]/div[2]/div/div/button[2]")
-    private WebElement Check1;
+    private WebElement clickCheck1;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]")
-    private WebElement Job;
+    private WebElement getJobTitles;
 
     @FindBy(xpath = "//a[text()=\"Job Titles\"]")
-    private WebElement JobTitles;
+    private WebElement jobTitles;
 
 
-    public Verify_Page_Job_Tittle(WebDriver driver) {
+    public VerifyJobTittlePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void Verify() throws InterruptedException {
+    public void verifyJobTittle() throws InterruptedException {
 
         Wait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).
                 pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
 
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Job)).click();
-        fluentWait.until(ExpectedConditions.elementToBeClickable(JobTitles)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(getJobTitles)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(jobTitles)).click();
 
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Check)).click();
+        fluentWait.until(ExpectedConditions.elementToBeClickable(clickCheck)).click();
 
 
         String NameBeforeSaveJobTittle = "WorkerQANazar";

@@ -3,62 +3,87 @@ package org.example;
 import Page.*;
 import WebDriver_1.WebDriverFinal;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 public class Main_FinalTask {
 
     public static WebDriver driver;
 
-    public static Login_Page login_page;
+    public static LoginPage login_page;
 
-    public static Admin_Page admin_page;
+    public static AdminPage admin_page;
 
-    public static New_Job_Tittle_Page new_job_tittle_page;
+    public static NewJobTittlePage new_job_tittle_page;
 
-    public static Verify_Page_Job_Tittle verify_page_job_tittle;
+    public static VerifyJobTittlePage verify_page_job_tittle;
 
-    public static PIM_Menu_Page pim_menu_page;
+    public static PIMMenuPage pim_menu_page;
 
-    public static Create_Job_Employer_Page create_job_employer_page;
+    public static JobEmployerCreationPage create_job_employer_page;
 
-    public static Admin_Menu_Page admin_menu_page;
+    public static AdminMenuPage admin_menu_page;
 
-    public static User_Management_Page user_management_page;
+    public static UserManagementPage user_management_page;
 
-    public static Verify_Admin_Page verify_admin_page;
+    public static VerifyAdminPage verify_admin_page;
 
 
-
+       @Test
     public static void main(String[] args) throws InterruptedException {
-        driver = WebDriverFinal.getWebDriver();
+           driver = WebDriverFinal.getWebDriver();
 
-        login_page = new Login_Page(driver);
-        login_page.Login();
+           login_page = new LoginPage(driver);
+           login_page.loginPage();
+       }
 
-       admin_page = new Admin_Page(driver);
-        admin_page.Admin();
+       @Test
+    public void Test1() throws InterruptedException {
+       admin_page = new AdminPage(driver);
+        admin_page.clickAdminPage();}
 
-        new_job_tittle_page = new New_Job_Tittle_Page(driver);
-       new_job_tittle_page.New_Job();
+    @Test
+    public void Test2() throws InterruptedException {
 
-        verify_page_job_tittle = new Verify_Page_Job_Tittle(driver);
-        verify_page_job_tittle.Verify();
+        new_job_tittle_page = new NewJobTittlePage(driver);
+       new_job_tittle_page.createNewJob();}
 
-        pim_menu_page = new PIM_Menu_Page(driver);
-        pim_menu_page.PIM_Menu();
+    @Test
+    public void Test3() throws InterruptedException {
 
-        create_job_employer_page = new Create_Job_Employer_Page(driver);
-       create_job_employer_page.Job_Employer();
+        verify_page_job_tittle = new VerifyJobTittlePage(driver);
+        verify_page_job_tittle.verifyJobTittle();}
 
-        admin_menu_page = new Admin_Menu_Page(driver);
-        admin_menu_page.Admin_M();
+    @Test
+    public void Test4() throws InterruptedException {
 
-        user_management_page = new User_Management_Page(driver);
-        user_management_page.User();
+        pim_menu_page = new PIMMenuPage(driver);
+        pim_menu_page.createPIM();}
 
-        verify_admin_page = new Verify_Admin_Page(driver);
-        verify_admin_page.VerifyAdmin();
+    @Test
+    public void Test5() throws InterruptedException {
 
+        create_job_employer_page = new JobEmployerCreationPage(driver);
+       create_job_employer_page.createJobEmployer();}
+
+    @Test
+    public void Test6() throws InterruptedException {
+
+        admin_menu_page = new AdminMenuPage(driver);
+        admin_menu_page.clickAdminMenu();}
+
+    @Test
+    public void Test7() throws InterruptedException {
+
+        user_management_page = new UserManagementPage(driver);
+        user_management_page.createUser();}
+
+    @Test
+    public void Test8() throws InterruptedException {
+
+        verify_admin_page = new VerifyAdminPage(driver);
+        verify_admin_page.verifyAdmin();
 
 
     }
+
 }

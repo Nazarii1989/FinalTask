@@ -10,31 +10,24 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class Login_Page {
+public class AdminPage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//input[@name=\"username\"]")
-    private WebElement Username;
+    @FindBy(xpath = "//a[@href=\"/web/index.php/admin/viewAdminModule\"]")
+    private WebElement admin;
 
-    @FindBy(xpath = "//input[@name=\"password\"]")
-    private WebElement Password;
-
-    @FindBy(xpath = "//button[@type=\"submit\"]")
-    private WebElement Login;
-
-    public Login_Page (WebDriver driver){
+    public AdminPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-
-    public void Login() throws InterruptedException {
+    public void clickAdminPage() throws InterruptedException {
 
         Wait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).
                 pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Username)).sendKeys("Admin");
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Password)).sendKeys("admin123");
-        fluentWait.until(ExpectedConditions.elementToBeClickable(Login)).click();
+
+        fluentWait.until(ExpectedConditions.elementToBeClickable(admin)).click();
+
     }
 }
