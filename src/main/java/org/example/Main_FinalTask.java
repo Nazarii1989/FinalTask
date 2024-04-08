@@ -34,51 +34,27 @@ public class Main_FinalTask {
 
            login_page = new LoginPage(driver);
            login_page.loginPage();
-       }
 
-       @Test
-    public void Test1() throws InterruptedException {
        admin_page = new AdminPage(driver);
-        admin_page.clickAdminPage();}
-
-    @Test
-    public void Test2() throws InterruptedException {
+        admin_page.clickAdminPage();
 
         new_job_tittle_page = new NewJobTittlePage(driver);
-       new_job_tittle_page.createNewJob();}
-
-    @Test
-    public void Test3() throws InterruptedException {
+       new_job_tittle_page.createNewJob();
 
         verify_page_job_tittle = new VerifyJobTittlePage(driver);
-        verify_page_job_tittle.verifyJobTittle();}
-
-    @Test
-    public void Test4() throws InterruptedException {
+        verify_page_job_tittle.verifyJobTittle();
 
         pim_menu_page = new PIMMenuPage(driver);
-        pim_menu_page.createPIM();}
-
-    @Test
-    public void Test5() throws InterruptedException {
+        pim_menu_page.createPIM();
 
         create_job_employer_page = new JobEmployerCreationPage(driver);
-       create_job_employer_page.createJobEmployer();}
-
-    @Test
-    public void Test6() throws InterruptedException {
+       create_job_employer_page.createJobEmployer();
 
         admin_menu_page = new AdminMenuPage(driver);
-        admin_menu_page.clickAdminMenu();}
-
-    @Test
-    public void Test7() throws InterruptedException {
+        admin_menu_page.clickAdminMenu();
 
         user_management_page = new UserManagementPage(driver);
-        user_management_page.createUser();}
-
-    @Test
-    public void Test8() throws InterruptedException {
+        user_management_page.createUser();
 
         verify_admin_page = new VerifyAdminPage(driver);
         verify_admin_page.verifyAdmin();
