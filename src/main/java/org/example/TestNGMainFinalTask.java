@@ -5,7 +5,7 @@ import WebDriver_1.WebDriverFinal;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class Main_FinalTask {
+public class TestNGMainFinalTask {
 
     public static WebDriver driver;
 
@@ -29,7 +29,7 @@ public class Main_FinalTask {
 
 
        @Test
-    public static void main(String[] args) throws InterruptedException {
+    public static void testNG(String[] args) throws InterruptedException {
            driver = WebDriverFinal.getWebDriver();
 
            login_page = new LoginPage(driver);
