@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-14T15:48:17 EDT" name="YourTestSuite" finished-at="2024-04-14T15:49:20 EDT" duration-ms="63108">
+    <groups>
+    </groups>
+    <test started-at="2024-04-14T15:48:17 EDT" name="YourTest" finished-at="2024-04-14T15:49:20 EDT" duration-ms="63108">
+      <class name="TestFinal.TestMainFinalTask">
+        <test-method signature="testMainFinalTask()[pri:0, instance:TestFinal.TestMainFinalTask@71ba6d4e]" started-at="2024-04-14T15:48:17 EDT" name="testMainFinalTask" finished-at="2024-04-14T15:49:20 EDT" duration-ms="62943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMainFinalTask -->
+      </class> <!-- TestFinal.TestMainFinalTask -->
+    </test> <!-- YourTest -->
+  </suite> <!-- YourTestSuite -->
+</testng-results>
