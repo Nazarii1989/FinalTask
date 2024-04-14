@@ -111,7 +111,7 @@ public class PIMMenuPage {
     @FindBy(xpath = "//div[3]/div/form/div[1]/div/div/div/div[2]/div")
     private WebElement fileSelect;
 
-    @FindBy(xpath = "//form/div[4]/button")
+    @FindBy(xpath = "//form/div[5]/button")
     private WebElement saveButton1;
 
     @FindBy(xpath = "//form/div[2]/button")
@@ -157,5 +157,6 @@ public class PIMMenuPage {
         fluentWait.until(ExpectedConditions.elementToBeClickable(yearsOfBirthday)).click();
        fluentWait.until(ExpectedConditions.elementToBeClickable(daysOct)).click();
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", saveButton1);
+
 }
    }
