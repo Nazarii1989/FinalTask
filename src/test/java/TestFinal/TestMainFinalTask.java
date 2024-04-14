@@ -2,6 +2,9 @@ package TestFinal;
 
 import Page.*;
 import WebDriver_1.WebDriverFinal;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -21,6 +24,10 @@ public class TestMainFinalTask {
 
 
     @Test
+    @Description("This is Final Test")
+    @Story("Worker page")
+    @Feature("Create job information")
+
     public static void testMainFinalTask () throws InterruptedException {
            driver = WebDriverFinal.getWebDriver();
 
