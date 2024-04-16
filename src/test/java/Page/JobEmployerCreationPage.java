@@ -15,7 +15,7 @@ public class JobEmployerCreationPage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//div/div/div[1]/div[2]/div[6]/a")
+    @FindBy(xpath = "//a[text()=\"Job\"]")
     private WebElement jobMenu;
 
     @FindBy(xpath = "//input[@placeholder=\"yyyy-dd-mm\"]")
@@ -36,31 +36,31 @@ public class JobEmployerCreationPage {
     @FindBy(xpath = "//div[text()=\"10\"]")
     private WebElement jobDaysListMenuJoinedDate;
 
-    @FindBy(xpath = "//form/div[1]/div/div[2]/div/div[2]/div/div")
+    @FindBy(xpath = "(//div[text()=\"-- Select --\"])[1]")
     private WebElement jobTitleClick;
 
     @FindBy(xpath = "//span[text()=\"WorkerQANazar\"]")
     private WebElement jobTitleList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[4]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[2]")
     private WebElement jobCategory;
 
     @FindBy(xpath = "//span[text()=\"Technicians\"]")
     private WebElement jobCategoryList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[5]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[3]")
     private WebElement subUnit;
 
     @FindBy(xpath = "//span[text()=\"Development\"]")
     private WebElement subUnitList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[6]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[4]")
     private WebElement location;
 
     @FindBy(xpath = "//span[text()=\"Texas R&D\"]")
     private WebElement locationList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[7]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[5]")
     private WebElement employmentStatus;
 
     @FindBy(xpath = "//span[text()=\"Full-Time Contract\"]")
@@ -69,14 +69,12 @@ public class JobEmployerCreationPage {
     @FindBy(xpath = "//span[@class=\"oxd-switch-input oxd-switch-input--active --label-right\"]")
     private WebElement contractDetailsButton;
 
-    @FindBy(xpath = "//form/div[3]/div/div[1]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[3]")
     private WebElement contractDetailsDateStart;
 
-    @FindBy(xpath = "//form/div[3]/div/div[2]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[4]")
     private WebElement contractDetailsDateFinish;
 
-    @FindBy(xpath = "//form/div[4]/div/div/div/div/div[2]/div/div[2]")
-    private WebElement file1;
 
     @FindBy(xpath = "//button[@type=\"submit\"]")
     private WebElement saveButton;

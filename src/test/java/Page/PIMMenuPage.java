@@ -33,8 +33,6 @@ public class PIMMenuPage {
     @FindBy(xpath = "//button[@class=\"oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space\"]")
     private WebElement clickSaveButton;
 
-    @FindBy(xpath = "//form/div[1]/div[2]/div/div/div[2]/input")
-    private WebElement nickName;
 
     @FindBy(xpath = "//form/div[2]/div[1]/div[2]/div/div[2]/input")
     private WebElement otherID;
@@ -42,7 +40,7 @@ public class PIMMenuPage {
     @FindBy(xpath = "//form/div[2]/div[2]/div[1]/div/div[2]/input")
     private WebElement driverButton;
 
-    @FindBy(xpath = "//form/div[2]/div[2]/div[2]/div/div[2]/div/div/i")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-calendar oxd-date-input-icon\"])[1]")
     private WebElement dateButton;
 
     @FindBy(xpath = "//ul[@class=\"oxd-calendar-selector\"]/li[1]")
@@ -63,13 +61,13 @@ public class PIMMenuPage {
     @FindBy(xpath = "//div[@class=\"oxd-calendar-dates-grid\"]/div[20]")
     private WebElement daysMar;
 
-    @FindBy(xpath = "//form/div[3]/div[1]/div[1]/div/div[2]/div/div")
+    @FindBy(xpath = "(//div[@class=\"oxd-select-text oxd-select-text--active\"])[1]")
     private WebElement nationality;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[186]")
     private WebElement nationalityList;
 
-    @FindBy(xpath = "//form/div[3]/div[1]/div[2]/div/div[2]/div/div/div[2]/i")
+    @FindBy(xpath = "(//div[@class=\"oxd-select-text oxd-select-text--active\"])[2]")
     private WebElement maritalStatus;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[3]")
@@ -78,16 +76,16 @@ public class PIMMenuPage {
     @FindBy(xpath = "//input[@value=\"2\"]")
     private WebElement radioButton;
 
-    @FindBy(xpath = "//form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[3]")
     private WebElement bloodTapeButton;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[4]")
     private WebElement bloodTapeList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[2]/div/div[2]/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[7]")
     private WebElement test_Field;
 
-    @FindBy(xpath = "//form/div[3]/div[2]/div[1]/div/div[2]/div/div/i")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-calendar oxd-date-input-icon\"])[2]")
     private WebElement dateOfBirthday;
 
     @FindBy(xpath = "//ul[@class=\"oxd-calendar-selector\"]/li[1]")
@@ -108,8 +106,6 @@ public class PIMMenuPage {
     @FindBy(xpath = "//button[@class=\"oxd-button oxd-button--medium oxd-button--text\"]")
     private WebElement addAttachments;
 
-    @FindBy(xpath = "//div[3]/div/form/div[1]/div/div/div/div[2]/div")
-    private WebElement fileSelect;
 
     @FindBy(xpath = "//form/div[4]/button")
     private WebElement saveButton1;

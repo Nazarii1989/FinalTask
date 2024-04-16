@@ -17,13 +17,13 @@ public class UserManagementPage {
     @FindBy(xpath = "//button[@class=\"oxd-button oxd-button--medium oxd-button--secondary\"]")
     private WebElement addButton;
 
-    @FindBy(xpath = "//form/div[1]/div/div[1]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[1]")
     private WebElement userRoleMenu;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[2]")
     private WebElement userRoleList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[3]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[2]")
     private WebElement statusMenu;
 
     @FindBy(xpath = "//span[text()=\"Enabled\"]")
@@ -35,13 +35,13 @@ public class UserManagementPage {
     @FindBy(xpath = "//span[text()=\"Nazarii QA Simson\"]")
     private WebElement employeeNameList;
 
-    @FindBy(xpath = "//form/div[1]/div/div[4]/div/div[2]/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[2]")
     private WebElement userName;
 
-    @FindBy(xpath = "//form/div[2]/div/div[1]/div/div[2]/input")
+    @FindBy(xpath = "(//input[@type=\"password\"])[1]")
     private WebElement createPassword;
 
-    @FindBy(xpath = "//form/div[2]/div/div[2]/div/div[2]/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[2]")
     private WebElement confirmPassword;
 
     @FindBy(xpath = "//button[@type=\"submit\"]")

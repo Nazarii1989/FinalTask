@@ -17,19 +17,19 @@ public class VerifyAdminPage {
     @FindBy(xpath = "//form/div[1]/div/div[1]/div/div[2]/input")
     private WebElement userName1;
 
-    @FindBy(xpath = "//form/div[1]/div/div[2]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[1]")
     private WebElement userRole1;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[2]")
     private WebElement userRoleList1;
 
-    @FindBy(xpath = "//form/div[1]/div/div[3]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder=\"Type for hints...\"])[1]")
     private WebElement employeeName1;
 
     @FindBy(xpath = "//span[text()=\"Nazarii QA Simson\"]")
     private WebElement employeeName1List;
 
-    @FindBy(xpath = "//form/div[1]/div/div[4]/div/div[2]/div/div/div[2]")
+    @FindBy(xpath = "(//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"])[2]")
     private WebElement status1;
 
     @FindBy(xpath = "//div[@role=\"listbox\"]/div[2]")

@@ -14,7 +14,7 @@ public class NewJobTittlePage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]")
+    @FindBy(xpath = "//nav[@aria-label=\"Topbar Menu\"]/ul/li[2]")
     private WebElement createJob;
 
     @FindBy(xpath = "//a[text()=\"Job Titles\"]")
@@ -23,7 +23,7 @@ public class NewJobTittlePage {
     @FindBy(xpath = "//button[@class=\"oxd-button oxd-button--medium oxd-button--secondary\"]")
     private WebElement clickAddButton;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/input")
+    @FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[2]")
     private WebElement addJobTittle;
 
     @FindBy(xpath = "//textarea[@placeholder=\"Type description here\"]")

@@ -17,10 +17,8 @@ public class VerifyJobTittlePage {
     @FindBy(xpath = "//div[text()=\"WorkerQANazar\"]")
     private WebElement clickCheck;
 
-    @FindBy(xpath = "//div[30]/div/div/div[1]/div[2]/div/div/button[2]")
-    private WebElement clickCheck1;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]")
+    @FindBy(xpath = "//nav[@aria-label=\"Topbar Menu\"]/ul/li[2]")
     private WebElement getJobTitles;
 
     @FindBy(xpath = "//a[text()=\"Job Titles\"]")
